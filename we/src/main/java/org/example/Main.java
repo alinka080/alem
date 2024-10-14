@@ -69,10 +69,10 @@ public class Main {
                 double speed = wind.getDouble("speed");
 
                 System.out.println("Погода в " + city + ":");
-                System.out.println("Описание: " + description + "C");
+                System.out.println("Описание: " + description );
                 System.out.println("Температура: " + temperature + "C");
-                System.out.println("Влажность: " + humidity + "C");
-                System.out.println("Скорость ветра: " + speed + "C");
+                System.out.println("Влажность: " + humidity + "%");
+                System.out.println("Скорость ветра: " + speed + " м/с");
                 System.out.println(response);
             }
             catch (Exception e){
