@@ -15,11 +15,13 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (true) {
-        System.out.println("Введите какой тип мема вы хотите: ");
-        System.out.println("1 - собака");
+        System.out.println("Введите цифру: ");
+        System.out.println("1 - фотка собаки");
         System.out.println("2 - факт о котиках");
-        System.out.println("3 - анекдоты для стариков");
+        System.out.println("3 - анекдот");
         System.out.println("0 - выход");
+        System.out.println(" ");
+
         int command = scanner.nextInt();
         switch (command) {
             case 1:
@@ -42,6 +44,8 @@ public class Main {
 
                     String message = jsonResponse.getString("message");
                     System.out.println(message);
+                    System.out.println(" ");
+
                 } catch (Exception e) {
                     System.out.println("Ошибка: " + e.getMessage());
                 }
@@ -69,6 +73,7 @@ public class Main {
 
                     String fact1 = translateText(fact);
                     System.out.println(fact1);
+                    System.out.println(" ");
 
                 } catch (Exception e) {
                     System.out.println("Ошибка: " + e.getMessage());
@@ -98,10 +103,9 @@ public class Main {
 
                     String setup1 = translateText(setup);
                     System.out.println(setup1);
-
                     String punchline1 = translateText(punchline);
                     System.out.println(punchline1);
-
+                    System.out.println(" ");
 
                 } catch (Exception e) {
                     System.out.println("Ошибка: " + e.getMessage());
